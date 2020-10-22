@@ -1,7 +1,8 @@
 #ifndef SSE2NEON_H
 #define SSE2NEON_H
 
-#if defined(__ARM_NEON)
+#if defined(__ARM_NEON) // Added by Joshua Measure-Hughes for porting IQ-TREE, alongside further functionality located at the end of this file.
+
 // This header file provides a simple API translation layer
 // between SSE intrinsics to their corresponding Arm/Aarch64 NEON versions
 //
@@ -4132,7 +4133,7 @@ FORCE_INLINE uint64_t _mm_crc32_u64(uint64_t crc, uint64_t v)
     return crc;
 }
 
-// ------------------------------------ IQ-TREE additional functionality ----------------------------------------------- //
+// ------------------------------------ IQ-TREE additional functionality by Joshua Measure-Hughes (2020) ----------------------------------------------- //
 
 /*
 FORCE_INLINE __m128d _mm_sqrt_pd(const double a)
